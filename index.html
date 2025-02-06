@@ -1,0 +1,526 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Krist
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-50">
+  <!-- Header -->
+  <header class="bg-white shadow">
+   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">
+     Krist
+    </div>
+    <nav class="hidden md:flex space-x-6">
+     <a class="text-gray-700 hover:text-gray-900" href="#">
+      Home
+     </a>
+     <a class="text-gray-700 hover:text-gray-900" href="#">
+      Shop
+     </a>
+     <a class="text-gray-700 hover:text-gray-900" href="#">
+      Our Story
+     </a>
+     <a class="text-gray-700 hover:text-gray-900" href="#">
+      Blog
+     </a>
+     <a class="text-gray-700 hover:text-gray-900" href="#">
+      Contact Us
+     </a>
+    </nav>
+    <div class="flex items-center space-x-4">
+     <i class="fas fa-search text-gray-700">
+     </i>
+     <i class="fas fa-heart text-gray-700">
+     </i>
+     <i class="fas fa-shopping-cart text-gray-700">
+     </i>
+     <button class="bg-black text-white px-4 py-2 rounded">
+      Login
+     </button>
+    </div>
+   </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="bg-gray-100 py-16">
+   <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+    <div class="md:w-1/2">
+     <h2 class="text-4xl font-bold mb-4">
+      Classic Exclusive
+     </h2>
+     <h1 class="text-6xl font-bold mb-4">
+      Women's Collection
+     </h1>
+     <p class="text-xl mb-6">
+      UPTO 40% OFF
+     </p>
+     <button class="bg-black text-white px-6 py-3 rounded">
+      Shop Now
+     </button>
+    </div>
+    <div class="md:w-1/2">
+     <img alt="Woman in stylish outfit" height="800" src="https://storage.googleapis.com/a1aa/image/8GZA6faiqURoAyLe0Ld4xtBjqZzJ1Zgg8DMBLAugdxSI75HUA.jpg" width="600"/>
+    </div>
+   </div>
+  </section>
+  <!-- Shop by Categories -->
+  <section class="py-16">
+   <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8">
+     Shop by Categories
+    </h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+     <div class="relative">
+      <img alt="Casual Wear" height="400" src="https://storage.googleapis.com/a1aa/image/9es1lUY2UnVAZKh9aRfCY7hycBeenXOQ0Hh6cTgzWh46rnfgC.jpg" width="300"/>
+      <button class="text-center w-9/12 absolute bottom-4 left-4 bg-white px-4 py-2 rounded">
+       Casual Wear
+      </button>
+     </div>
+     <div class="relative">
+      <img alt="Western Wear" height="400" src="https://storage.googleapis.com/a1aa/image/vOaOujIR1pp4Fd9HzVGiBqYBP6f3Sd5pGfPVw7cGnB2y65HUA.jpg" width="300"/>
+      <button class="text-center w-9/12 absolute bottom-4 left-4 bg-white px-4 py-2 rounded">
+       Western Wear
+      </button>
+     </div>
+     <div class="relative">
+      <img alt="Ethnic Wear" height="400" src="https://storage.googleapis.com/a1aa/image/QNCvVWfsqJzfZ0jvriCecffdfOVWJX2zfjmqGoZFARG8a98DKA.jpg" width="300"/>
+      <button class="text-center w-9/12 absolute bottom-4 left-4 bg-white px-4 py-2 rounded">
+       Ethnic Wear
+      </button>
+     </div>
+     <div class="relative">
+      <img alt="Kids Wear" height="400" src="https://storage.googleapis.com/a1aa/image/7rH4kdaS2TJdAVScntKasoBOEeYs4Hkf59C7wNIVyxxG75HUA.jpg" width="300"/>
+      <button class="text-center w-9/12 absolute bottom-4 left-4 bg-white px-4 py-2 rounded">
+       Kids Wear
+      </button>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Our Bestseller -->
+  <section class="py-16 bg-gray-100">
+   <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8">
+     Our Bestseller
+    </h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-white p-4 rounded shadow product-card relative group">
+        <!-- Hình ảnh sản phẩm -->
+        <img 
+          alt="Roadster T-Shirt" 
+          height="400" 
+          src="https://storage.googleapis.com/a1aa/image/2YeeSbSpTshLqklyedyiLC5DA2LF6XxGWJA2qwEpG7jy1zPoA.jpg" 
+          width="300" 
+          class="w-full"
+        />
+        
+        <!-- Tên và mô tả sản phẩm -->
+        <h3 class="text-lg font-bold mt-4">Roadster</h3>
+        <p class="text-gray-500">Printed Cotton T-Shirt</p>
+        
+        <!-- Giá sản phẩm -->
+        <p class="text-gray-900">$38.00 <span class="line-through">$40.00</span></p>
+
+        <!-- Nút yêu thích -->
+        <i class="absolute bg-white top-[20] right-[20] fa-regular fa-star group-hover:opacity-100 opacity-0"></i>
+        <!-- Nút "Add to Cart" -->
+        <button 
+          class="absolute top-2/3 left-1/3
+          bg-black text-white px-4 py-2 rounded opacity-0 duration-300 group-hover:opacity-100">
+          Add to Cart
+        </button>
+      </div>
+      
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="Allen Solly Handbag" height="400" src="https://storage.googleapis.com/a1aa/image/RneZkXvu6VwDTa58QPzlPm59b3XcikxFdeMdZqWGhZ9f1zPoA.jpg" width="300"/>
+      <h3 class="text-lg font-bold mt-4">
+       Allen Solly
+      </h3>
+      <p class="text-gray-500">
+       Women Textured Handheld Bag
+      </p>
+      <p class="text-gray-900">
+       $50.00
+       <span class="line-through">
+        $100.00
+       </span>
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="Louis Philippe Sport T-Shirt" height="400" src="https://storage.googleapis.com/a1aa/image/0OOoIe3QlJRbbKDVjLueRJAhVRNed4VZxWzEqZZfYhvWsnfgC.jpg" width="300"/>
+      <h3 class="text-lg font-bold mt-4">
+       Louis Philippe Sport
+      </h3>
+      <p class="text-gray-500">
+       Polo Collar T-Shirt
+      </p>
+      <p class="text-gray-900">
+       $50.00
+       <span class="line-through">
+        $55.00
+       </span>
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="Adidas Running Shoes" height="400" src="https://storage.googleapis.com/a1aa/image/KmAHaj7lwwLgKpf7OzktMM807BELUqfdfMwmstr1mmGh1zPoA.jpg" width="300"/>
+      <h3 class="text-lg font-bold mt-4">
+       Adidas
+      </h3>
+      <p class="text-gray-500">
+       Men adidas Running Shoes
+      </p>
+      <p class="text-gray-900">
+       $50.00
+       <span class="line-through">
+        $70.00
+       </span>
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="Trendyol Maxi Dress" height="400" src="https://storage.googleapis.com/a1aa/image/WfHDlqnGBfgENUEfNp31wE6sneUaFiWjQgk1HX6LhYfbYPfBF.jpg" width="300"/>
+      <h3 class="text-lg font-bold mt-4">
+       Trendyol
+      </h3>
+      <p class="text-gray-500">
+       Floral Embroidered Maxi Dress
+      </p>
+      <p class="text-gray-900">
+       $35.00
+       <span class="line-through">
+        $45.00
+       </span>
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="YK Disney Dress" height="400" src="https://storage.googleapis.com/a1aa/image/mSmVypv50XY8Dp55itYTjxbb1DFDgVqVohEloPHuM8pue8DKA.jpg" width="300"/>
+      <h3 class="text-lg font-bold mt-4">
+       YK Disney
+      </h3>
+      <p class="text-gray-500">
+       Girls Pink Monna Printed Dress
+      </p>
+      <p class="text-gray-900">
+       $55.00
+       <span class="line-through">
+        $100.00
+       </span>
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="US Polo Shirt" height="400" src="https://storage.googleapis.com/a1aa/image/f2lGJYX9SEXjP6b1gKKCsqXlEMFbVeMHJyyDlnwpaKeP2zPoA.jpg" width="300"/>
+      <h3 class="text-lg font-bold mt-4">
+       US Polo
+      </h3>
+      <p class="text-gray-500">
+       Tailored Cotton Casual Shirt
+      </p>
+      <p class="text-gray-900">
+       $40.00
+       <span class="line-through">
+        $50.00
+       </span>
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <img alt="Zyla Sandals" height="400" src="https://storage.googleapis.com/a1aa/image/EbpP3vs83fXGISQDeWsy6Tws5AH3PxXUAt3je3ti9CAfqnfgC.jpg" width="300"/>
+      <h3 class="text-lg font-bold mt-4">
+       Zyla
+      </h3>
+      <p class="text-gray-500">
+       Women Sandals
+      </p>
+      <p class="text-gray-900">
+       $35.00
+       <span class="line-through">
+        $40.00
+       </span>
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Deals of the Month -->
+  <section class="py-16">
+   <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+    <div class="md:w-1/2">
+     <h2 class="text-3xl font-bold mb-4">
+      Deals of the Month
+     </h2>
+     <p class="text-gray-500 mb-6">
+      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+     </p>
+     <div class="flex space-x-4 mb-6">
+      <div class="text-center">
+       <div class="text-4xl font-bold">
+        120
+       </div>
+       <div class="text-gray-500">
+        Days
+       </div>
+      </div>
+      <div class="text-center">
+       <div class="text-4xl font-bold">
+        18
+       </div>
+       <div class="text-gray-500">
+        Hours
+       </div>
+      </div>
+      <div class="text-center">
+       <div class="text-4xl font-bold">
+        15
+       </div>
+       <div class="text-gray-500">
+        Mins
+       </div>
+      </div>
+      <div class="text-center">
+       <div class="text-4xl font-bold">
+        10
+       </div>
+       <div class="text-gray-500">
+        Secs
+       </div>
+      </div>
+     </div>
+     <button class="bg-black text-white px-6 py-3 rounded">
+      View All Products
+     </button>
+    </div>
+    <div class="md:w-1/2">
+     <img alt="Woman in stylish outfit" height="800" src="https://storage.googleapis.com/a1aa/image/8GZA6faiqURoAyLe0Ld4xtBjqZzJ1Zgg8DMBLAugdxSI75HUA.jpg" width="600"/>
+    </div>
+   </div>
+  </section>
+  <!-- Customer Testimonials -->
+  <section class="py-16 bg-gray-100">
+   <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8">
+     What our Customer say’s
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+     <div class="bg-white p-4 rounded shadow">
+      <div class="flex items-center mb-4">
+       <img alt="Customer photo" class="rounded-full" height="50" src="https://storage.googleapis.com/a1aa/image/fygLnEFKguzffI4bEjpiiyy5kBCpe6sWtTCgIDFDzIrGsnfgC.jpg" width="50"/>
+       <div class="ml-4">
+        <h3 class="text-lg font-bold">
+         Leslie Alexander
+        </h3>
+        <div class="flex text-yellow-500">
+         <i class="fas fa-star">
+         </i>
+         <i class="fas fa-star">
+         </i>
+         <i class="fas fa-star">
+         </i>
+         <i class="fas fa-star">
+         </i>
+         <i class="fas fa-star">
+         </i>
+        </div>
+       </div>
+      </div>
+      <p class="text-gray-500">
+       It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <div class="flex items-center mb-4">
+       <img alt="Customer photo" class="rounded-full" height="50" src="https://storage.googleapis.com/a1aa/image/fygLnEFKguzffI4bEjpiiyy5kBCpe6sWtTCgIDFDzIrGsnfgC.jpg" width="50"/>
+       <div class="ml-4">
+        <h3 class="text-lg font-bold">
+         Jacob Jones
+        </h3>
+        <div class="flex text-yellow-500">
+         <i class="fas fa-star">
+         </i>
+         <i class="fas fa-star">
+         </i>
+         <i class="fas fa-star">
+         </i>
+         <i class="fas fa-star">
+         </i>
+         <i class="fas fa-star">
+         </i>
+        </div>
+       </div>
+      </div>
+      <p class="text-gray-500">
+       It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded shadow">
+      <div class="flex items-center mb-4">
+       <img alt="Customer photo" class="rounded-full" height="50" src="https://storage.googleapis.com/a1aa/image/fygLnEFKguzffI4bEjpiiyy5kBCpe6sWtTCgIDFDzIrGsnfgC.jpg" width="50"/>
+       <div class="ml-4">
+        <h3 class="text-lg font-bold">
+         Jenny Wilson
+        </h3>
+        <div class="flex text-yellow-500">
+         <i class="fas fa-star">
+         </i>
+         <i class="fas fa-star">
+         </i>
+         <i class="fas fa-star">
+         </i>
+         <i class="fas fa-star">
+         </i>
+         <i class="fas fa-star">
+         </i>
+        </div>
+       </div>
+      </div>
+      <p class="text-gray-500">
+       It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Instagram Stories -->
+  <section class="py-16">
+   <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8">
+     Our Instagram Stories
+    </h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+     <div>
+      <img alt="Instagram story 1" height="400" src="https://storage.googleapis.com/a1aa/image/tlJqS5zJfmVybKgant7kmfFct7fWWHlx5KB4qXTUl8k21zPoA.jpg" width="300"/>
+     </div>
+     <div>
+      <img alt="Instagram story 2" height="400" src="https://storage.googleapis.com/a1aa/image/etnFpUl10kXbfU8hVwOqZItpfij7aiLp7XjzefrvJl0vXPfBF.jpg" width="300"/>
+     </div>
+     <div>
+      <img alt="Instagram story 3" height="400" src="https://storage.googleapis.com/a1aa/image/xLIAgTBrN5qnCRvxxWYT4gcUwxNqtWgbg4e6r5IS5XCb98DKA.jpg" width="300"/>
+     </div>
+     <div>
+      <img alt="Instagram story 4" height="400" src="https://storage.googleapis.com/a1aa/image/khtHveLIv1TTbCuhgaqbpU9Fk7rgewYDxmTinb4PRap465HUA.jpg" width="300"/>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-black text-white py-16">
+   <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+     <div>
+      <h3 class="text-xl font-bold mb-4">
+       Krist
+      </h3>
+      <p class="mb-4">
+       (704) 555-0127
+      </p>
+      <p class="mb-4">
+       info@example.com
+      </p>
+      <p class="mb-4">
+       3891 Ranchview Dr. Richardson, California 62639
+      </p>
+      <div class="flex space-x-4">
+       <i class="fab fa-cc-visa">
+       </i>
+       <i class="fab fa-cc-mastercard">
+       </i>
+       <i class="fab fa-cc-amex">
+       </i>
+       <i class="fab fa-cc-paypal">
+       </i>
+      </div>
+     </div>
+     <div>
+      <h3 class="text-xl font-bold mb-4">
+       Information
+      </h3>
+      <ul>
+       <li class="mb-2">
+        <a class="hover:underline" href="#">
+         My Account
+        </a>
+       </li>
+       <li class="mb-2">
+        <a class="hover:underline" href="#">
+         Login
+        </a>
+       </li>
+       <li class="mb-2">
+        <a class="hover:underline" href="#">
+         My Cart
+        </a>
+       </li>
+       <li class="mb-2">
+        <a class="hover:underline" href="#">
+         My Wishlist
+        </a>
+       </li>
+       <li class="mb-2">
+        <a class="hover:underline" href="#">
+         Checkout
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h3 class="text-xl font-bold mb-4">
+       Service
+      </h3>
+      <ul>
+       <li class="mb-2">
+        <a class="hover:underline" href="#">
+         About Us
+        </a>
+       </li>
+       <li class="mb-2">
+        <a class="hover:underline" href="#">
+         Careers
+        </a>
+       </li>
+       <li class="mb-2">
+        <a class="hover:underline" href="#">
+         Delivery Information
+        </a>
+       </li>
+       <li class="mb-2">
+        <a class="hover:underline" href="#">
+         Privacy Policy
+        </a>
+       </li>
+       <li class="mb-2">
+        <a class="hover:underline" href="#">
+         Terms &amp; Conditions
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h3 class="text-xl font-bold mb-4">
+       Subscribe
+      </h3>
+      <p class="mb-4">
+       Enter your email below to be the first to know about our new collections and product launches.
+      </p>
+      <input class="w-full px-4 py-2 rounded mb-4" placeholder="Your Email" type="email"/>
+      <button class="bg-white text-black px-4 py-2 rounded">
+       Subscribe
+      </button>
+     </div>
+    </div>
+    <div class="text-center mt-8">
+     <p>
+      © 2023 Krist All rights reserved
+     </p>
+    </div>
+   </div>
+  </footer>
+ </body>
+</html>

@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <title>Shop by Categories</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8">Shop by Categories</h2>
+        <div class="relative">
+          <!-- Nút Prev -->
+          <button
+            id="prevBtn"
+            class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded z-10"
+          >
+            Prev
+          </button>
+
+          <!-- Khung trượt -->
+          <div class="overflow-hidden">
+            <div
+              id="slider"
+              class="flex transition-transform duration-500"
+              style="width: fit-content"
+            >
+              <!-- Danh mục -->
+              <div class="relative w-1/4 flex-shrink-0 px-2">
+                <img
+                  alt="Casual Wear"
+                  src="https://storage.googleapis.com/a1aa/image/9es1lUY2UnVAZKh9aRfCY7hycBeenXOQ0Hh6cTgzWh46rnfgC.jpg"
+                />
+                <button
+                  class="text-center w-[340] absolute bottom-4 left-4 bg-white px-4 py-2 rounded"
+                >
+                  Casual Wear
+                </button>
+              </div>
+              <div class="relative w-1/4 flex-shrink-0 px-2">
+                <img
+                  alt="Western Wear"
+                  src="https://storage.googleapis.com/a1aa/image/vOaOujIR1pp4Fd9HzVGiBqYBP6f3Sd5pGfPVw7cGnB2y65HUA.jpg"
+                />
+                <button
+                  class="text-center w-[340] absolute bottom-4 left-4 bg-white px-4 py-2 rounded"
+                >
+                  Western Wear
+                </button>
+              </div>
+              <div class="relative w-1/4 flex-shrink-0 px-2">
+                <img
+                  alt="Ethnic Wear"
+                  src="https://storage.googleapis.com/a1aa/image/QNCvVWfsqJzfZ0jvriCecffdfOVWJX2zfjmqGoZFARG8a98DKA.jpg"
+                />
+                <button
+                  class="text-center w-[340] absolute bottom-4 left-4 bg-white px-4 py-2 rounded"
+                >
+                  Ethnic Wear
+                </button>
+              </div>
+              <div class="relative w-1/4 flex-shrink-0 px-2">
+                <img
+                  alt="Kids Wear"
+                  src="https://storage.googleapis.com/a1aa/image/7rH4kdaS2TJdAVScntKasoBOEeYs4Hkf59C7wNIVyxxG75HUA.jpg"
+                />
+                <button
+                  class="text-center w-[340] absolute bottom-4 left-4 bg-white px-4 py-2 rounded"
+                >
+                  Kids Wear
+                </button>
+              </div>
+              <!-- Thêm danh mục để kiểm tra trượt -->
+              <div class="relative w-1/4 flex-shrink-0 px-2">
+                <img
+                  alt="Formal Wear"
+                  src="https://storage.googleapis.com/a1aa/image/QNCvVWfsqJzfZ0jvriCecffdfOVWJX2zfjmqGoZFARG8a98DKA.jpg"
+                />
+                <button
+                  class="text-center w-[340] absolute bottom-4 left-4 bg-white px-4 py-2 rounded"
+                >
+                  Formal Wear
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nút Next -->
+          <button
+            id="nextBtn"
+            class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded z-10"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const slider = document.getElementById("slider");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      // Số lượng danh mục hiển thị cùng lúc
+      const itemsPerView = 4;
+
+      // Danh sách các danh mục
+      const items = slider.children;
+
+      // Tổng số danh mục
+      const totalItems = items.length;
+
+      // Chỉ số hiện tại của danh mục đầu tiên
+      let currentIndex = 0;
+
+      // Chiều rộng của một danh mục (bao gồm cả padding)
+      const itemWidth = items[0].offsetWidth;
+
+      // Nút Next
+      nextBtn.addEventListener("click", () => {
+        if (currentIndex < totalItems - itemsPerView) {
+          currentIndex++;
+          slider.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+        }
+      });
+
+      // Nút Prev
+      prevBtn.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          slider.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+        }
+      });
+    </script>
+  </body>
+</html>

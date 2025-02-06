@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>OTP Verification</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const inputs = document.querySelectorAll('input[type="text"]');
+
+    inputs.forEach((input, index) => {
+        // Xử lý khi nhập ký tự
+        input.addEventListener('input', () => {
+            if (input.value.length === 1) {
+                if (index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                } else {
+                    document.getElementById('otpForm').submit();
+                }
+            }
+        });
+
+        // Xử lý khi xóa ký tự
+        input.addEventListener('keydown', (e) => {
+            if (e.key === "Backspace" && input.value === "" && index > 0) {
+                inputs[index - 1].focus(); // Chuyển con trỏ về ô trước đó
+                inputs[index - 1].value = ""; // Xóa ký tự trong ô trước đó
+            }
+        });
+    });
+});
+
+    </script>
+</head>
+<body class="bg-gray-100">
+<div class="flex min-h-screen">
+    <!-- Left Image Section -->
+    <div class="w-1/2 hidden md:block">
+        <img alt="Person sitting in a chair with geometric light structures" class="w-full h-full object-cover"
+             height="1000" src="https://placehold.co/800x1000" width="800"/>
+    </div>
+    <!-- Right Form Section -->
+    <div class="w-full md:w-1/2 flex items-center justify-center bg-white">
+        <div class="max-w-md w-full p-8">
+            <div class="flex items-center mb-6">
+                <i class="fas fa-chevron-left text-lg mr-2"></i>
+                <span class="text-lg">Back</span>
+            </div>
+            <h2 class="text-2xl font-bold mb-2">Enter OTP</h2>
+            <p class="text-gray-500 mb-4">We have shared a code to your registered email address</p>
+            <p class="text-gray-500 mb-6">robertfox@example.com</p>
+            <form id="otpForm" action="/verify" method="POST">
+                <div class="flex space-x-2 mb-6">
+                    <input autocomplete="off" class="w-12 h-12 border border-gray-300 rounded-lg text-center text-2xl" maxlength="1"
+                           type="text" name="otp1"/>
+                    <input autocomplete="off" class="w-12 h-12 border border-gray-300 rounded-lg text-center text-2xl" maxlength="1"
+                           type="text" name="otp2"/>
+                    <input autocomplete="off" class="w-12 h-12 border border-gray-300 rounded-lg text-center text-2xl" maxlength="1"
+                           type="text" name="otp3"/>
+                    <input autocomplete="off" class="w-12 h-12 border border-gray-300 rounded-lg text-center text-2xl" maxlength="1"
+                           type="text" name="otp4"/>
+                    <input autocomplete="off" class="w-12 h-12 border border-gray-300 rounded-lg text-center text-2xl" maxlength="1"
+                           type="text" name="otp5"/>
+                    <input autocomplete="off" class="w-12 h-12 border border-gray-300 rounded-lg text-center text-2xl" maxlength="1"
+                           type="text" name="otp6"/>
+                </div>
+                <button class="w-full bg-black text-white py-3 rounded-lg text-lg" type="submit">Verify</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Shipping Address</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+<header class="border-b border-gray-200">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <img alt="Krist logo" class="h-8 w-8" height="50" src="https://storage.googleapis.com/a1aa/image/AM4k5WOpbeRINCF0YGTM63FvM69qQVvv6CxTEbecleJr3fcQB.jpg" width="50"/>
+            <span class="ml-2 text-xl font-bold">Krist</span>
+        </div>
+        <nav class="space-x-6">
+            <a class="text-gray-600 hover:text-gray-900" href="#">Home</a>
+            <a class="text-gray-600 hover:text-gray-900" href="#">Shop</a>
+            <a class="text-gray-600 hover:text-gray-900" href="#">Our Story</a>
+            <a class="text-gray-600 hover:text-gray-900" href="#">Blog</a>
+            <a class="text-gray-600 hover:text-gray-900" href="#">Contact Us</a>
+        </nav>
+        <div class="space-x-4">
+            <i class="fas fa-search text-gray-600"></i>
+            <i class="fas fa-heart text-gray-600"></i>
+            <i class="fas fa-shopping-cart text-gray-600"></i>
+            <button class="bg-black text-white px-4 py-2 rounded">Login</button>
+        </div>
+    </div>
+</header>
+<main class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-6">Shipping Address</h1>
+    <div class="flex flex-col lg:flex-row lg:space-x-8">
+        <div class="flex-1">
+            <div class="flex justify-between items-center space-x-4 mb-6">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-map-marker-alt text-black"></i>
+                    <span class="font-semibold">Address</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-credit-card text-gray-400"></i>
+                    <span class="text-gray-400">Payment Method</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-check-circle text-gray-400"></i>
+                    <span class="text-gray-400">Review</span>
+                </div>
+            </div>
+            <h2 class="text-xl font-semibold mb-4">Select a delivery address</h2>
+            <p class="text-gray-600 mb-6">Is the address you'd like to use displayed below? If so, click the corresponding "Deliver to this address" button. Or you can enter a new delivery address.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div class="border border-gray-200 p-4 rounded-lg">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="font-semibold">Robert Fox</p>
+                            <p class="text-gray-600">4517 Washington Ave. Manchester, Kentucky 39495</p>
+                        </div>
+                        <input class="form-checkbox h-5 w-5 text-black" type="checkbox"/>
+                    </div>
+                    <div class="flex justify-between mt-4">
+                        <button class="bg-gray-200 text-gray-600 hover:text-gray-900 flex items-center px-3 py-1 rounded">
+                            <i class="fas fa-edit mr-2"></i> Edit
+                        </button>
+                        <button class="bg-red-200 text-red-600 hover:text-red-800 flex items-center px-3 py-1 rounded">
+                            <i class="fas fa-trash-alt mr-2"></i> Delete
+                        </button>
+                    </div>
+                </div>
+                <div class="border border-gray-200 p-4 rounded-lg">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="font-semibold">John Willions</p>
+                            <p class="text-gray-600">3891 Ranchview Dr. Richardson, California 62639</p>
+                        </div>
+                        <input class="form-checkbox h-5 w-5 text-black" type="checkbox"/>
+                    </div>
+                    <div class="flex justify-between mt-4">
+                        <button class="bg-gray-200 text-gray-600 hover:text-gray-900 flex items-center px-3 py-1 rounded">
+                            <i class="fas fa-edit mr-2"></i> Edit
+                        </button>
+                        <button class="bg-red-200 text-red-600 hover:text-red-800 flex items-center px-3 py-1 rounded">
+                            <i class="fas fa-trash-alt mr-2"></i> Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="bg-black text-white px-6 py-2 rounded mb-6">Deliver Here</button>
+            <h2 class="text-xl font-semibold mb-4">Add a new address</h2>
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-gray-600" for="name">Name</label>
+                    <input class="w-full border border-gray-300 rounded px-4 py-2" id="name" placeholder="Enter Name" type="text"/>
+                </div>
+                <div>
+                    <label class="block text-gray-600" for="mobile">Mobile Number</label>
+                    <input class="w-full border border-gray-300 rounded px-4 py-2" id="mobile" placeholder="Enter Mobile Number" type="text"/>
+                </div>
+                <div>
+                    <label class="block text-gray-600" for="address">Flat, House no., Building, Company, Apartment</label>
+                    <input class="w-full border border-gray-300 rounded px-4 py-2" id="address" placeholder="Enter Address" type="text"/>
+                </div>
+                <div>
+                    <label class="block text-gray-600" for="area">Area, Colony, Street, Sector, Village</label>
+                    <input class="w-full border border-gray-300 rounded px-4 py-2" id="area" placeholder="Enter Area" type="text"/>
+                </div>
+                <div>
+                    <label class="block text-gray-600" for="city">City</label>
+                    <select class="w-full border border-gray-300 rounded px-4 py-2" id="city">
+                        <option>Select City</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gray-600" for="pin">Pin Code</label>
+                    <input class="w-full border border-gray-300 rounded px-4 py-2" id="pin" placeholder="Enter Pin Code" type="text"/>
+                </div>
+                <div>
+                    <label class="block text-gray-600" for="state">State</label>
+                    <select class="w-full border border-gray-300 rounded px-4 py-2" id="state">
+                        <option>Select State</option>
+                    </select>
+                </div>
+                <div class="flex items-center">
+                    <input class="form-checkbox h-5 w-5 text-black" id="default-address" type="checkbox"/>
+                    <label class="ml-2 text-gray-600" for="default-address">Use as my default address</label>
+                </div>
+                <button class="bg-black text-white px-6 py-2 rounded">Add New Address</button>
+            </form>
+        </div>
+        <div class="w-full lg:w-1/3 mt-8 lg:mt-0">
+            <div class="border border-gray-200 p-4 rounded-lg">
+                <h2 class="text-xl font-semibold mb-4">Order Summary</h2>
+                <div class="flex justify-between mb-2">
+                    <span class="text-gray-600">Subtotal</span>
+                    <span class="font-semibold">$200.00</span>
+                </div>
+                <div class="flex justify-between mb-2">
+                    <span class="text-gray-600">Enter Discount Code</span>
+                    <div class="flex">
+                        <input class="border border-gray-300 rounded-l px-4 py-2" placeholder="FLAT50" type="text"/>
+                        <button class="bg-black text-white px-4 py-2 rounded-r">Apply</button>
+                    </div>
+                </div>
+                <div class="flex justify-between mb-2">
+                    <span class="text-gray-600">Delivery Charge</span>
+                    <span class="font-semibold">$5.00</span>
+                </div>
+                <div class="flex justify-between mb-2">
+                    <span class="text-gray-600">Grand Total</span>
+                    <span class="font-semibold">$205.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="bg-black text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between mb-8">
+            <div class="mb-8 md:mb-0">
+                <img alt="Krist logo" class="h-8 w-8 mb-4" height="50" src="https://storage.googleapis.com/a1aa/image/AM4k5WOpbeRINCF0YGTM63FvM69qQVvv6CxTEbecleJr3fcQB.jpg" width="50"/>
+                <p class="mb-4">(704) 555-0127</p>
+                <p class="mb-4">krist@example.com</p>
+                <p>3891 Ranchview Dr. Richardson, California 62639</p>
+            </div>
+            <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
+                <div>
+                    <h3 class="font-semibold mb-4">Information</h3>
+                    <ul class="space-y-2">
+                        <li><a class="text-gray-400 hover:text-white" href="#">My Account</a></li>
+                        <li><a class="text-gray-400 hover:text-white" href="#">Login</a></li>
+                        <li><a class="text-gray-400 hover:text-white" href="#">My Cart</a></li>
+                        <li><a class="text-gray-400 hover:text-white" href="#">My Wishlist</a></li>
+                        <li><a class="text-gray-400 hover:text-white" href="#">Checkout</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Service</h3>
+                    <ul class="space-y-2">
+                        <li><a class="text-gray-400 hover:text-white" href="#">About Us</a></li>
+                        <li><a class="text-gray-400 hover:text-white" href="#">Careers</a></li>
+                        <li><a class="text-gray-400 hover:text-white" href="#">Delivery Information</a></li>
+                        <li><a class="text-gray-400 hover:text-white" href="#">Privacy Policy</a></li>
+                        <li><a class="text-gray-400 hover:text-white" href="#">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Subscribe</h3>
+                    <p class="text-gray-400 mb-4">Enter your email below to be the first to know about new collections and product launches.</p>
+                    <div class="flex">
+                        <input class="border border-gray-300 rounded-l px-4 py-2" placeholder="Your Email" type="email"/>
+                        <button class="bg-black text-white px-4 py-2 rounded-r"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-between items-center">
+            <div class="flex space-x-4">
+                <img alt="Visa logo" class="h-6" height="25" src="https://storage.googleapis.com/a1aa/image/1Od7nvDZm0LANV7LoEd9oVu2l966493psQOf9HglEdI49nDKA.jpg" width="40"/>
+                <img alt="Mastercard logo" class="h-6" height="25" src="https://storage.googleapis.com/a1aa/image/tbMMMSkhivYEEB2dxFS52qFetchM4xdWBGuNCtAyeja07PHUA.jpg" width="40"/>
+                <img alt="Paypal logo" class="h-6" height="25" src="https://storage.googleapis.com/a1aa/image/Z9iCrRsaCgISPNaxy38R6AvC3eTvfGej96ItBEeGbsUPvf5gC.jpg" width="40"/>
+                <img alt="Google Pay logo" class="h-6" height="25" src="https://storage.googleapis.com/a1aa/image/CuzLE3I38IoFBJwIEyN5H3B9kxeX87reaRZ4B5wf8NDj3fcQB.jpg" width="40"/>
+            </div>
+            <p class="text-gray-400">© 2023 Krist All Rights are reserved</p>
+            <div class="flex space-x-4">
+                <a class="text-gray-400 hover:text-white" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-gray-400 hover:text-white" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="text-gray-400 hover:text-white" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

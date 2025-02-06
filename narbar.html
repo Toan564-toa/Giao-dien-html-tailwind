@@ -1,0 +1,139 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Krist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .dropdown-menu {
+            display: none;
+            left: -380%;
+            margin: 0 auto;
+        }
+        .dropdown-menu.show {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+<header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <img alt="Krist logo" class="h-10 w-10" height="40" src="https://storage.googleapis.com/a1aa/image/0mek94RbdlQvMqUH2eYB3Kalahcmd2ITyl30l46WXeAVnvMoA.jpg" width="40"/>
+            <span class="ml-2 text-2xl font-bold">Krist</span>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+            <a class="text-gray-700 hover:text-black" href="#">Home</a>
+            <div class="relative">
+                <a class="text-gray-700 hover:text-black flex items-center cursor-pointer" id="shop-link">
+                    Shop
+                    <i class="ml-1 fas fa-chevron-down"></i>
+                </a>
+                <div class="absolute  mt-2 w-max bg-white shadow-lg dropdown-menu" id="dropdown-menu">
+                    <div class="grid grid-cols-4 gap-4 p-4">
+                        <div>
+                            <h3 class="font-bold mb-2">Men</h3>
+                            <ul>
+                                <li><a class="text-gray-700 hover:text-black" href="#">T-Shirts</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Casual Shirts</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Formal Shirts</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Jackets</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Blazers & Coats</a></li>
+                            </ul>
+                            <h3 class="font-bold mt-4 mb-2">Indian & Festive Wear</h3>
+                            <ul>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Kurtas & Kurta Sets</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Sherwanis</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-2">Women</h3>
+                            <ul>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Kurtas & Suits</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Sarees</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Ethnic Wear</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Lehenga Cholis</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Jackets</a></li>
+                            </ul>
+                            <h3 class="font-bold mt-4 mb-2">Western Wear</h3>
+                            <ul>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Dresses</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Jumpsuits</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-2">Footwear</h3>
+                            <ul>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Flats</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Casual Shoes</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Heels</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Boots</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Sports Shoes & Floaters</a></li>
+                            </ul>
+                            <h3 class="font-bold mt-4 mb-2">Product Features</h3>
+                            <ul>
+                                <li><a class="text-gray-700 hover:text-black" href="#">360 Product Viewer</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Product with Video</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-2">Kids</h3>
+                            <ul>
+                                <li><a class="text-gray-700 hover:text-black" href="#">T-Shirts</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Shirts</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Jeans</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Trousers</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Party Wear</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Innerwear & Thermal</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Track Pants</a></li>
+                                <li><a class="text-gray-700 hover:text-black" href="#">Value Pack</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="text-gray-700 hover:text-black" href="#">Our Story</a>
+            <a class="text-gray-700 hover:text-black" href="#">Blog</a>
+            <a class="text-gray-700 hover:text-black" href="#">Contact Us</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <a class="text-gray-700 hover:text-black" href="#"><i class="fas fa-search"></i></a>
+            <a class="text-gray-700 hover:text-black" href="#"><i class="fas fa-heart"></i></a>
+            <a class="text-gray-700 hover:text-black" href="#"><i class="fas fa-shopping-cart"></i></a>
+            <button class="bg-black text-white px-4 py-2 rounded">Login</button>
+        </div>
+    </div>
+</header>
+<main class="container mx-auto px-4 py-16">
+    <div class="flex flex-col items-center text-center">
+        <h1 class="text-4xl font-bold mb-4">Classic Women's Collection</h1>
+        <p class="text-xl text-gray-700 mb-8">UPTO 40% OFF</p>
+        <button class="bg-black text-white px-6 py-3 rounded-full">
+            Shop Now
+            <i class="fas fa-arrow-right ml-2"></i>
+        </button>
+    </div>
+    <div class="mt-16">
+        <img alt="Woman in a red coat holding a black purse" class="mx-auto" height="400" src="https://storage.googleapis.com/a1aa/image/uBTfkDHovF1TTa34tZhms5MKWvlRdfCSIeg42eI0qbYmOfygC.jpg" width="1440"/>
+    </div>
+</main>
+<script>
+    document.getElementById('shop-link').addEventListener('click', function() {
+        var dropdownMenu = document.getElementById('dropdown-menu');
+        dropdownMenu.classList.toggle('show');
+    });
+
+    document.addEventListener('click', function(event) {
+        var isClickInside = document.getElementById('shop-link').contains(event.target) || document.getElementById('dropdown-menu').contains(event.target);
+        if (!isClickInside) {
+            document.getElementById('dropdown-menu').classList.remove('show');
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-gray-100">
+    <div class="flex min-h-screen">
+        <!-- Left Side Image -->
+        <div class="hidden lg:flex w-1/2 bg-white items-center justify-center">
+            <img alt="A woman sitting on a chair wearing a plaid shirt, blue sweater, blue jeans, and a blue beanie" class="object-cover h-full w-full" height="800" src="https://storage.googleapis.com/a1aa/image/BJM5HnecVo1eRkFhTrM8QCVHciSRr2dkGQoKoh3BcUylzlHUA.jpg" width="600"/>
+        </div>
+        <!-- Right Side Form -->
+        <div class="flex flex-col justify-center w-full lg:w-1/2 p-8 lg:p-24 bg-white">
+            <div class="flex justify-center lg:justify-start mb-8">
+                <img alt="Krist logo" class="h-10" height="50" src="https://storage.googleapis.com/a1aa/image/Bcf84wsHrUy9ViiJMm10WcjrOmfO7pvegJUXia3heC8ecu8gC.jpg" width="100"/>
+            </div>
+            <h2 class="text-3xl font-bold mb-2">Welcome <span class="wave">👋</span></h2>
+            <p class="text-gray-600 mb-8">Please login here</p>
+            <form>
+                <div class="mb-4">
+                    <label class="block text-gray-700" for="email">Email Address</label>
+                    <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" id="email" name="email" type="email" value="robertfox@example.com"/>
+                </div>
+                <div class="mb-4 relative">
+                    <label class="block text-gray-700" for="password">Password</label>
+                    <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" id="password" name="password" type="password" value="••••••••••••••"/>
+                    <button type="button" class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5" onclick="togglePassword()">
+                        <i id="toggleIcon" class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="flex items-center justify-between mb-6">
+                    <label class="flex items-center">
+                        <input class="form-checkbox h-4 w-4 text-blue-600" type="checkbox"/>
+                        <span class="ml-2 text-gray-700">Remember Me</span>
+                    </label>
+                    <a class="text-sm text-blue-600 hover:underline" href="#">Forgot Password?</a>
+                </div>
+                <button class="w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById('password');
+            const toggleIcon = document.getElementById('toggleIcon');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordField.type = 'password';
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
+            }
+        }
+    </script>
+</body>
+</html>
