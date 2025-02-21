@@ -1,0 +1,146 @@
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Jost", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-black text-center">
+    <div class="flex items-center space-x-4">
+      <a class="text-black hover:text-gray-700" href="#"
+        ><i class="fas fa-search"></i
+      ></a>
+      <a class="text-black hover:text-gray-700" href="#"
+        ><i class="fas fa-heart"></i
+      ></a>
+      <a class="text-black hover:text-gray-700" href="#"
+        ><i class="fas fa-shopping-cart"></i
+      ></a>
+      <div class="relative group">
+        <button class="text-black hover:text-gray-700 focus:outline-none">
+          <i class="fas fa-user-circle text-2xl"></i>
+        </button>
+        <div
+          class="absolute right-0 mt-2 w-48 bg-white border border-gray-200 shadow-lg rounded-md hidden group-hover:block"
+        >
+          <a class="block px-4 py-2 text-black hover:bg-gray-100" href="#"
+            >My Profile</a
+          >
+          <a class="block px-4 py-2 text-black hover:bg-gray-100" href="#"
+            >Logout</a
+          >
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-center space-x-4">
+      <a class="text-black hover:text-gray-700" href="#"
+        ><i class="fas fa-search"></i
+      ></a>
+      <a class="text-black hover:text-gray-700" href="#"
+        ><i class="fas fa-heart"></i
+      ></a>
+      <a class="text-black hover:text-gray-700" href="#"
+        ><i class="fas fa-shopping-cart"></i
+      ></a>
+
+      <div>
+        <i id="dropdownDelayButton"
+        data-dropdown-toggle="dropdownDelay"
+        data-dropdown-delay="500"
+        data-dropdown-trigger="hover"
+        class="fas fa-user-circle text-2xl"
+        ></i>
+        <!-- Dropdown menu -->
+        <div
+          id="dropdownDelay"
+          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700"
+        >
+          <ul
+            class="py-2 text-sm text-gray-700 dark:text-gray-200"
+            aria-labelledby="dropdownDelayButton"
+          >
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Dashboard</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Settings</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Earnings</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >Sign out</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const button = document.getElementById("dropdownDelayButton");
+        const dropdown = document.getElementById("dropdownDelay");
+
+        let timeout;
+
+        // Khi hover vào button, hiện dropdown
+        button.addEventListener("mouseenter", function () {
+          clearTimeout(timeout); // Xóa delay ẩn nếu có
+          dropdown.classList.remove("hidden");
+        });
+
+        // Khi rời khỏi button, đặt delay trước khi ẩn menu
+        button.addEventListener("mouseleave", function () {
+          timeout = setTimeout(() => {
+            dropdown.classList.add("hidden");
+          }, 500); // Delay 500ms giống Flowbite
+        });
+
+        // Khi hover vào dropdown, hủy bỏ ẩn menu
+        dropdown.addEventListener("mouseenter", function () {
+          clearTimeout(timeout);
+          dropdown.classList.remove("hidden");
+        });
+
+        // Khi rời khỏi dropdown, đặt delay ẩn menu
+        dropdown.addEventListener("mouseleave", function () {
+          timeout = setTimeout(() => {
+            dropdown.classList.add("hidden");
+          }, 500);
+        });
+      });
+    </script>
+  </body>
+</html>

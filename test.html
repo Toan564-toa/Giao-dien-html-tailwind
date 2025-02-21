@@ -1,144 +1,86 @@
-<html>
-  <head>
-    <title>Shop by Categories</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Customer Testimonials</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"/>
     <style>
-      .carousel {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-      }
+        body { font-family: 'Inter', sans-serif; }
     </style>
-  </head>
-  <body class="bg-white">
-    <section class="py-16">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8">Shop by Categories</h2>
-        <div class="relative">
-          <!-- Nút Prev -->
-          <button
-            id="prevBtn"
-            class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded z-10"
-          >
-            Prev
-          </button>
-
-          <!-- Khung trượt -->
-          <div class="overflow-hidden">
-            <div
-              id="slider"
-              class="flex transition-transform duration-500"
-              style="width: fit-content"
-            >
-              <!-- Danh mục -->
-              <div class="relative w-1/4 flex-shrink-0 px-2">
-                <img
-                  alt="Casual Wear"
-                  src="https://storage.googleapis.com/a1aa/image/9es1lUY2UnVAZKh9aRfCY7hycBeenXOQ0Hh6cTgzWh46rnfgC.jpg"
-                />
-                <button
-                  class="text-center w-[340] absolute bottom-4 left-4 bg-white px-4 py-2 rounded"
-                >
-                  Casual Wear
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto py-16 px-4">
+        <div class="flex justify-between items-center mb-12">
+            <h2 class="text-4xl font-bold">What our Customer say's</h2>
+            <div class="flex space-x-2">
+                <button id="prevBtn" class="bg-white text-black p-2 rounded-full shadow-md">
+                    <i class="fas fa-arrow-left"></i>
                 </button>
-              </div>
-              <div class="relative w-1/4 flex-shrink-0 px-2">
-                <img
-                  alt="Western Wear"
-                  src="https://storage.googleapis.com/a1aa/image/vOaOujIR1pp4Fd9HzVGiBqYBP6f3Sd5pGfPVw7cGnB2y65HUA.jpg"
-                />
-                <button
-                  class="text-center w-[340] absolute bottom-4 left-4 bg-white px-4 py-2 rounded"
-                >
-                  Western Wear
+                <button id="nextBtn" class="bg-black text-white p-2 rounded-full shadow-md">
+                    <i class="fas fa-arrow-right"></i>
                 </button>
-              </div>
-              <div class="relative w-1/4 flex-shrink-0 px-2">
-                <img
-                  alt="Ethnic Wear"
-                  src="https://storage.googleapis.com/a1aa/image/QNCvVWfsqJzfZ0jvriCecffdfOVWJX2zfjmqGoZFARG8a98DKA.jpg"
-                />
-                <button
-                  class="text-center w-[340] absolute bottom-4 left-4 bg-white px-4 py-2 rounded"
-                >
-                  Ethnic Wear
-                </button>
-              </div>
-              <div class="relative w-1/4 flex-shrink-0 px-2">
-                <img
-                  alt="Kids Wear"
-                  src="https://storage.googleapis.com/a1aa/image/7rH4kdaS2TJdAVScntKasoBOEeYs4Hkf59C7wNIVyxxG75HUA.jpg"
-                />
-                <button
-                  class="text-center w-[340] absolute bottom-4 left-4 bg-white px-4 py-2 rounded"
-                >
-                  Kids Wear
-                </button>
-              </div>
-              <!-- Thêm danh mục để kiểm tra trượt -->
-              <div class="relative w-1/4 flex-shrink-0 px-2">
-                <img
-                  alt="Formal Wear"
-                  src="https://storage.googleapis.com/a1aa/image/QNCvVWfsqJzfZ0jvriCecffdfOVWJX2zfjmqGoZFARG8a98DKA.jpg"
-                />
-                <button
-                  class="text-center w-[340] absolute bottom-4 left-4 bg-white px-4 py-2 rounded"
-                >
-                  Formal Wear
-                </button>
-              </div>
             </div>
-          </div>
-
-          <!-- Nút Next -->
-          <button
-            id="nextBtn"
-            class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black text-white px-4 py-2 rounded z-10"
-          >
-            Next
-          </button>
         </div>
-      </div>
-    </section>
-
+        <div id="testimonialContainer" class="flex justify-center space-x-4"></div>
+    </div>
+    
     <script>
-      const slider = document.getElementById("slider");
-      const prevBtn = document.getElementById("prevBtn");
-      const nextBtn = document.getElementById("nextBtn");
+        const testimonials = [
+            { name: "Leslie Alexander", role: "Model", img: "https://placehold.co/40x40", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+            { name: "Jacob Jones", role: "Co-Founder", img: "https://placehold.co/40x40", text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." },
+            { name: "Jenny Wilson", role: "Fashion Designer", img: "https://placehold.co/40x40", text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." },
+            { name: "Cameron Williamson", role: "Entrepreneur", img: "https://placehold.co/40x40", text: "Duis aute irure dolor in reprehenderit in voluptate velit esse." },
+            { name: "Kristin Watson", role: "CEO", img: "https://placehold.co/40x40", text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa." },
+            { name: "Ralph Edwards", role: "Investor", img: "https://placehold.co/40x40", text: "Consectetur adipiscing elit, sed do eiusmod tempor incididunt." }
+        ];
 
-      // Số lượng danh mục hiển thị cùng lúc
-      const itemsPerView = 4;
+        let startIndex = 0;
 
-      // Danh sách các danh mục
-      const items = slider.children;
-
-      // Tổng số danh mục
-      const totalItems = items.length;
-
-      // Chỉ số hiện tại của danh mục đầu tiên
-      let currentIndex = 0;
-
-      // Chiều rộng của một danh mục (bao gồm cả padding)
-      const itemWidth = items[0].offsetWidth;
-
-      // Nút Next
-      nextBtn.addEventListener("click", () => {
-        if (currentIndex < totalItems - itemsPerView) {
-          currentIndex++;
-          slider.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+        function renderTestimonials() {
+            const container = document.getElementById('testimonialContainer');
+            container.innerHTML = '';
+            for (let i = 0; i < 3; i++) {
+                const index = (startIndex + i) % testimonials.length;
+                const t = testimonials[index];
+                const testimonialHTML = `
+                    <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 mb-4">${t.text}</p>
+                        <div class="flex items-center">
+                            <img class="w-10 h-10 rounded-full mr-4" src="${t.img}" alt="${t.name}"/>
+                            <div>
+                                <p class="font-bold">${t.name}</p>
+                                <p class="text-sm text-gray-500">${t.role}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += testimonialHTML;
+            }
         }
-      });
 
-      // Nút Prev
-      prevBtn.addEventListener("click", () => {
-        if (currentIndex > 0) {
-          currentIndex--;
-          slider.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-        }
-      });
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            startIndex = (startIndex + 1) % testimonials.length;
+            renderTestimonials();
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            startIndex = (startIndex - 1 + testimonials.length) % testimonials.length;
+            renderTestimonials();
+        });
+
+        renderTestimonials();
     </script>
-  </body>
+</body>
 </html>

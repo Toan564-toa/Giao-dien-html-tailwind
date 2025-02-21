@@ -8,127 +8,31 @@
   </title>
   <script src="https://cdn.tailwindcss.com">
   </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  rel="stylesheet"
+/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
   <style>
    body {
-            font-family: 'Inter', sans-serif;
-        }
+    font-family: 'Inter', sans-serif;
+  }
+  .card:hover .overlay {
+  opacity: 1;
+  }
   </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-             const toggles = document.querySelectorAll('.toggle-category');
-             toggles.forEach(toggle => {
-                 toggle.addEventListener('click', function () {
-                     const category = this.nextElementSibling;
-                     category.classList.toggle('hidden');
-                     this.querySelector('i').classList.toggle('fa-plus');
-                     this.querySelector('i').classList.toggle('fa-minus');
-                 });
-             });
-         });
-   </script>
  </head>
  <body class="bg-white text-gray-800">
-  <header class="border-b border-gray-200">
-   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="flex items-center space-x-4">
-     <img alt="Krist logo" class="h-8" height="50" src="https://storage.googleapis.com/a1aa/image/6FMjl1XkIZq8AJS8C7snR2LjO2v6eAeNZN6UOjOpJ9IqFrGUA.jpg" width="50"/>
-     <nav class="hidden md:flex space-x-6">
-      <a class="text-gray-600 hover:text-gray-900" href="#">
-       Home
-      </a>
-      <a class="text-gray-600 hover:text-gray-900" href="#">
-       Shop
-      </a>
-      <a class="text-gray-600 hover:text-gray-900" href="#">
-       Our Story
-      </a>
-      <a class="text-gray-600 hover:text-gray-900" href="#">
-       Blog
-      </a>
-      <a class="text-gray-600 hover:text-gray-900" href="#">
-       Contact Us
-      </a>
-     </nav>
-    </div>
-    <div class="flex items-center space-x-4">
-     <i class="fas fa-search text-gray-600">
-     </i>
-     <i class="fas fa-heart text-gray-600">
-     </i>
-     <i class="fas fa-shopping-cart text-gray-600">
-     </i>
-     <button class="bg-black text-white px-4 py-2 rounded">
-      Login
-     </button>
-    </div>
-   </div>
-  </header>
   <main class="container mx-auto px-4 py-8">
    <div class="flex flex-col lg:flex-row">
     <aside class="w-full lg:w-1/4 pr-0 lg:pr-8 mb-8 lg:mb-0">
         <div class="border-b border-gray-200 pb-4 mb-4">
-         <h2 class="text-lg font-semibold mb-2 flex justify-between items-center cursor-pointer toggle-category">
-          Product Categories
-          <i class="fas fa-plus">
-          </i>
+         <h2 class="text-lg font-semibold mb-2 flex justify-between items-center cursor-pointer toggle-category">Product Categories
+          <i class="fas fa-plus"></i>
          </h2>
          <ul class="space-y-2 hiddenn">
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            Men
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            Women
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            Kids
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            Bags
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            Belts
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            Wallets
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            Watches
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            Accessories
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            Winter Wear
-           </span>
-          </li>
+          <li class="flex items-center"><input class="mr-2" type="checkbox"/><span>Men</span></li>
+          <li class="flex items-center"><input class="mr-2" type="checkbox"/><span>Women</span></li>
          </ul>
         </div>
         <div class="border-b border-gray-200 pb-4 mb-4">
@@ -156,42 +60,8 @@
           </i>
          </h2>
          <ul class="space-y-2 hiddenn">
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            Red (10)
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            Blue (14)
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            Orange (8)
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            Black (9)
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            Green (4)
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            Yellow (2)
-           </span>
-          </li>
+          <li class="flex items-center"><input class="mr-2" type="checkbox"/><span>Red (10)</span></li>
+          <li class="flex items-center"><input class="mr-2" type="checkbox"/><span> Blue (14)</span></li>
          </ul>
         </div>
         <div>
@@ -201,42 +71,9 @@
           </i>
          </h2>
          <ul class="space-y-2 hiddenn">
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            S (6)
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            M (20)
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            L (7)
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            XL (16)
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            XXL (10)
-           </span>
-          </li>
-          <li class="flex items-center">
-           <input class="mr-2" type="checkbox"/>
-           <span>
-            XXXL (2)
-           </span>
-          </li>
+          <li class="flex items-center"><input class="mr-2" type="checkbox"/><span>S (6)</span></li>
+          <li class="flex items-center"><input class="mr-2" type="checkbox"/><span>M (20)</span></li>
+          
          </ul>
         </div>
        </aside>
@@ -254,345 +91,161 @@
       </div>
      </div>
      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        <div class="border p-4 relative group">
-            <img alt="Women textured Handheld Bag" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/0myxjdgsX36xAhv7KECje1L3wvGNpjhAP1N9epjyp8W4FrGUA.jpg" width="200"/>
-            <button class="bg-black text-white px-4 py-2 rounded w-full mb-4">
-             Add to Cart
+
+        <div
+        class="card bg-white hover:shadow-xl w-64 h-110 relative overflow-hidden"
+      >
+        <div class="relative h-80">
+          <img
+            alt="White T-shirt with a small logo in the center"
+            class="w-full h-full object-cover"
+            height="330"
+            src="https://storage.googleapis.com/a1aa/image/MSTn7yA3fyZFHAGlWXBk7nhwiz0apOyrlCgC-ufECbM.jpg"
+            width="300"
+          />
+          <div
+            class="overlay absolute inset-0 bg-opacity-50 flex flex-col justify-center items-center opacity-0 transition-opacity duration-300"
+          >
+            <button class="text-white mb-4">
+              <!-- 
+            box-shadow: 5px 5px 15px 0px #00000052
+        -->
+              <i class="far fa-heart absolute text-black top-5 right-5 border rounded-full border-[#D9D9D9] p-3 bg-[#D9D9D9] hover:bg-white"> </i>
             </button>
-            <h3 class="text-lg font-semibold">
-             Allen Solly
-            </h3>
-            <p class="text-sm text-gray-600">
-             Women textured Handheld Bag
-            </p>
-            <p class="text-lg font-semibold">
-             $80.00
-             <span class="line-through text-gray-500">
-              $100.00
-             </span>
-            </p>
-            <i class="fas fa-heart absolute top-4 right-4 text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
-            </i>
-           </div>
-      <div class="border p-4">
-       <img alt="Polo Collar T-Shirt" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/624k05FUkyrLFBfUdes0tFzdTuNOeXIFGK9OX65tEXKqLWNoA.jpg" width="200"/>
-       <h3 class="text-lg font-semibold">
-        Louis Philippe Sport
-       </h3>
-       <p class="text-sm text-gray-600">
-        Polo Collar T-Shirt
-       </p>
-       <p class="text-lg font-semibold">
-        $50.00
-        <span class="line-through text-gray-500">
-         $55.00
-        </span>
-       </p>
+            <button class="bg-black text-white py-2 px-4 rounded-lg absolute bottom-2 w-5/6 hover:bg-gray-800">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="p-4">
+          <h2 class="text-lg font-bold">Roadstar</h2>
+          <p class="text-gray-600">Printed Cotton T-Shirt</p>
+          <div class="flex items-center mt-2">
+            <span class="text-lg font-bold"> $38.00 </span>
+            <span class="text-gray-400 line-through ml-2"> $38.00 </span>
+          </div>
+        </div>
       </div>
-      <div class="border p-4">
-       <img alt="Men addi-dash Running Shoes" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/uleyLHDbrL2NCCFcWeOV3TAeQr5KiBD3F9OuhvHlwD5PLWNoA.jpg" width="200"/>
-       <h3 class="text-lg font-semibold">
-        Adidas
-       </h3>
-       <p class="text-sm text-gray-600">
-        Men addi-dash Running Shoes
-       </p>
-       <p class="text-lg font-semibold">
-        $60.00
-        <span class="line-through text-gray-500">
-         $75.00
-        </span>
-       </p>
+
+      <div
+        class="card bg-white hover:shadow-xl w-64 h-110 relative overflow-hidden"
+      >
+        <div class="relative h-80">
+          <img
+            alt="White T-shirt with a small logo in the center"
+            class="w-full h-full object-cover"
+            height="330"
+            src="https://storage.googleapis.com/a1aa/image/MSTn7yA3fyZFHAGlWXBk7nhwiz0apOyrlCgC-ufECbM.jpg"
+            width="300"
+          />
+          <div
+            class="overlay absolute inset-0 bg-opacity-50 flex flex-col justify-center items-center opacity-0 transition-opacity duration-300"
+          >
+            <button class="text-white mb-4">
+              <!-- 
+            box-shadow: 5px 5px 15px 0px #00000052
+        -->
+              <i class="far fa-heart absolute text-black top-5 right-5 border rounded-full border-[#D9D9D9] p-3 bg-[#D9D9D9] hover:bg-white"> </i>
+            </button>
+            <button class="bg-black text-white py-2 px-4 rounded-lg absolute bottom-2 w-5/6 hover:bg-gray-800">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="p-4">
+          <h2 class="text-lg font-bold">Roadstar</h2>
+          <p class="text-gray-600">Printed Cotton T-Shirt</p>
+          <div class="flex items-center mt-2">
+            <span class="text-lg font-bold"> $38.00 </span>
+            <span class="text-gray-400 line-through ml-2"> $38.00 </span>
+          </div>
+        </div>
       </div>
-      <div class="border p-4">
-       <img alt="Printed Cotton T-Shirt" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/KTS7o8KVHEJAGJ3zXDm4aofwtWooa5sT8DpCI1IUDervFrGUA.jpg" width="200"/>
-       <h3 class="text-lg font-semibold">
-        Roadstar
-       </h3>
-       <p class="text-sm text-gray-600">
-        Printed Cotton T-Shirt
-       </p>
-       <p class="text-lg font-semibold">
-        $38.00
-        <span class="line-through text-gray-500">
-         $40.00
-        </span>
-       </p>
+
+      <div
+        class="card bg-white hover:shadow-xl w-64 h-110 relative overflow-hidden"
+      >
+        <div class="relative h-80">
+          <img
+            alt="White T-shirt with a small logo in the center"
+            class="w-full h-full object-cover"
+            height="330"
+            src="https://storage.googleapis.com/a1aa/image/MSTn7yA3fyZFHAGlWXBk7nhwiz0apOyrlCgC-ufECbM.jpg"
+            width="300"
+          />
+          <div
+            class="overlay absolute inset-0 bg-opacity-50 flex flex-col justify-center items-center opacity-0 transition-opacity duration-300"
+          >
+            <button class="text-white mb-4">
+              <!-- 
+            box-shadow: 5px 5px 15px 0px #00000052
+        -->
+              <i class="far fa-heart absolute text-black top-5 right-5 border rounded-full border-[#D9D9D9] p-3 bg-[#D9D9D9] hover:bg-white"> </i>
+            </button>
+            <button class="bg-black text-white py-2 px-4 rounded-lg absolute bottom-2 w-5/6 hover:bg-gray-800">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="p-4">
+          <h2 class="text-lg font-bold">Roadstar</h2>
+          <p class="text-gray-600">Printed Cotton T-Shirt</p>
+          <div class="flex items-center mt-2">
+            <span class="text-lg font-bold"> $38.00 </span>
+            <span class="text-gray-400 line-through ml-2"> $38.00 </span>
+          </div>
+        </div>
       </div>
-      <div class="border p-4">
-       <img alt="Tailored Cotton Casual Shirt" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/sRgbdYvHye0YU6STejTp56OVMhVhDAbKsWGEBFEesYcZLWNoA.jpg" width="200"/>
-       <h3 class="text-lg font-semibold">
-        US Polo
-       </h3>
-       <p class="text-sm text-gray-600">
-        Tailored Cotton Casual Shirt
-       </p>
-       <p class="text-lg font-semibold">
-        $40.00
-        <span class="line-through text-gray-500">
-         $50.00
-        </span>
-       </p>
-      </div>
-      <div class="border p-4">
-       <img alt="Women Sandals" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/Zy1jeowQXnVfc0f5MBuSG65PgBNxMTScN4cMZes4B2jvWsaQB.jpg" width="200"/>
-       <h3 class="text-lg font-semibold">
-        Zyla
-       </h3>
-       <p class="text-sm text-gray-600">
-        Women Sandals
-       </p>
-       <p class="text-lg font-semibold">
-        $35.00
-        <span class="line-through text-gray-500">
-         $40.00
-        </span>
-       </p>
-      </div>
-      <div class="border p-4">
-       <img alt="Girls Pink Moana Printed Dress" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/NQnw2pJhmcamDxoavcOpvvzGf8fT7byu3XCQSUlMHRD3FrGUA.jpg" width="200"/>
-       <h3 class="text-lg font-semibold">
-        YK Disney
-       </h3>
-       <p class="text-sm text-gray-600">
-        Girls Pink Moana Printed Dress
-       </p>
-       <p class="text-lg font-semibold">
-        $80.00
-        <span class="line-through text-gray-500">
-         $100.00
-        </span>
-       </p>
-      </div>
-      <div class="border p-4">
-       <img alt="Casual Blue Jeans" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/nUHTJEsp5WqDAR7ag4RbZzjMeJbOPnUsuNGyXhf7vFLtFrGUA.jpg" width="200"/>
-       <h3 class="text-lg font-semibold">
-        Arrow
-       </h3>
-       <p class="text-sm text-gray-600">
-        Casual Blue Jeans
-       </p>
-       <p class="text-lg font-semibold">
-        $50.00
-        <span class="line-through text-gray-500">
-         $60.00
-        </span>
-       </p>
-      </div>
-      <div class="border p-4">
-       <img alt="Floral Embroidered Maxi Dress" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/UcXmq0M9OMLJH9egfCJfTFYWDg7QuBqzDt5LpeYAU0kAXsaQB.jpg" width="200"/>
-       <h3 class="text-lg font-semibold">
-        Trendyol
-       </h3>
-       <p class="text-sm text-gray-600">
-        Floral Embroidered Maxi Dress
-       </p>
-       <p class="text-lg font-semibold">
-        $35.00
-        <span class="line-through text-gray-500">
-         $45.00
-        </span>
-       </p>
-      </div>
-      <div class="border p-4">
-       <img alt="Brown Leather Jacket" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/JqXvQsVLbPLNPhDyd74x8gOsEkffXIKB7wiRoZVReNgnLWNoA.jpg" width="200"/>
-       <h3 class="text-lg font-semibold">
-        Allen Solly
-       </h3>
-       <p class="text-sm text-gray-600">
-        Brown Leather Jacket
-       </p>
-       <p class="text-lg font-semibold">
-        $60.00
-        <span class="line-through text-gray-500">
-         $70.00
-        </span>
-       </p>
-      </div>
-      <div class="border p-4">
-       <img alt="Casual Shoe for Men" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/LUFW3o3Rug5eRykMhSVKNfOt21WQqXxwgeho7ZfyvAAnWsaQB.jpg" width="200"/>
-       <h3 class="text-lg font-semibold">
-        US Polo
-       </h3>
-       <p class="text-sm text-gray-600">
-        Casual Shoe for Men
-       </p>
-       <p class="text-lg font-semibold">
-        $40.00
-        <span class="line-through text-gray-500">
-         $50.00
-        </span>
-       </p>
-      </div>
-      <div class="border p-4">
-       <img alt="Leather Hand Purse" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/ixrGUVdVMI7dMVDdegnL9K34mFVpdu6SvdQNQpH9bg04iVDKA.jpg" width="200"/>
-       <h3 class="text-lg font-semibold">
-        Gucci
-       </h3>
-       <p class="text-sm text-gray-600">
-        Leather Hand Purse
-       </p>
-       <p class="text-lg font-semibold">
-        $40.00
-        <span class="line-through text-gray-500">
-         $60.00
-        </span>
-       </p>
-      </div>
-      <div class="border p-4">
-       <img alt="Red Printed T-Shirt" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/6OfXeaLj6HvcT0lu6Pllyh1JQuEsd1gHKbjPgkZBb805FrGUA.jpg" width="200"/>
-       <h3 class="text-lg font-semibold">
-        YK Disney
-       </h3>
-       <p class="text-sm text-gray-600">
-        Red Printed T-Shirt
-       </p>
-       <p class="text-lg font-semibold">
-        $30.00
-        <span class="line-through text-gray-500">
-         $35.00
-        </span>
-       </p>
-      </div>
-      <div class="border p-4">
-       <img alt="Printed Blazer for Men" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/PEAqXrKPth5EHpSFXeJe3ddwqFJzekEhL19zo5bpK4WpLWNoA.jpg" width="200"/>
-       <h3 class="text-lg font-semibold">
-        Roadstar
-       </h3>
-       <p class="text-sm text-gray-600">
-        Printed Blazer for Men
-       </p>
-       <p class="text-lg font-semibold">
-        $60.00
-        <span class="line-through text-gray-500">
-         $70.00
-        </span>
-       </p>
-      </div>
-      <div class="border p-4">
-       <img alt="Leather Hand Purse" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/ixrGUVdVMI7dMVDdegnL9K34mFVpdu6SvdQNQpH9bg04iVDKA.jpg" width="200"/>
-       <h3 class="text-lg font-semibold">
-        Flora
-       </h3>
-       <p class="text-sm text-gray-600">
-        Leather Hand Purse
-       </p>
-       <p class="text-lg font-semibold">
-        $35.00
-        <span class="line-through text-gray-500">
-         $45.00
-        </span>
-       </p>
-      </div>
+      
      </div>
-     <div class="flex justify-center mt-8">
-      <nav class="inline-flex space-x-2">
-       <a class="px-4 py-2 bg-gray-200 text-gray-800 rounded" href="#">
-        1
-       </a>
-       <a class="px-4 py-2 bg-gray-100 text-gray-600 rounded" href="#">
-        2
-       </a>
-       <a class="px-4 py-2 bg-gray-100 text-gray-600 rounded" href="#">
-        3
-       </a>
-       <a class="px-4 py-2 bg-gray-100 text-gray-600 rounded" href="#">
-        4
-       </a>
-       <a class="px-4 py-2 bg-gray-100 text-gray-600 rounded" href="#">
-        5
-       </a>
-      </nav>
+     <div class="flex justify-end mt-8">
+        <html>
+            <head>
+                <script src="https://cdn.tailwindcss.com"></script>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+            </head>
+            <body class="flex items-center justify-center min-h-screen bg-gray-100">
+                <div class="flex items-center space-x-2">
+                    <button class="text-gray-500">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-md bg-black text-white">
+                        1
+                    </button>
+                    <button class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-md text-gray-700">
+                        2
+                    </button>
+                    <button class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-md text-gray-700">
+                        3
+                    </button>
+                    <button class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-md text-gray-700">
+                        4
+                    </button>
+                    <button class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-md text-gray-700">
+                        5
+                    </button>
+                    <button class="text-gray-500">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </body>
+            </html>
      </div>
     </section>
    </div>
   </main>
-  <footer class="bg-gray-900 text-white py-12">
-   <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-     <div>
-      <img alt="Krist logo" class="mb-4" height="50" src="https://storage.googleapis.com/a1aa/image/6FMjl1XkIZq8AJS8C7snR2LjO2v6eAeNZN6UOjOpJ9IqFrGUA.jpg" width="100"/>
-      <p class="text-sm">
-       Free Shipping
-      </p>
-      <p class="text-sm">
-       Free shipping for order above $150
-      </p>
-     </div>
-     <div>
-      <h3 class="text-lg font-semibold mb-4">
-       Information
-      </h3>
-      <ul class="space-y-2 text-sm">
-       <li>
-        <a class="hover:underline" href="#">
-         My Account
-        </a>
-       </li>
-       <li>
-        <a class="hover:underline" href="#">
-         Login
-        </a>
-       </li>
-       <li>
-        <a class="hover:underline" href="#">
-         My Cart
-        </a>
-       </li>
-       <li>
-        <a class="hover:underline" href="#">
-         My Wishlist
-        </a>
-       </li>
-       <li>
-        <a class="hover:underline" href="#">
-         Checkout
-        </a>
-       </li>
-      </ul>
-     </div>
-     <div>
-      <h3 class="text-lg font-semibold mb-4">
-       Service
-      </h3>
-      <ul class="space-y-2 text-sm">
-       <li>
-        <a class="hover:underline" href="#">
-         About Us
-        </a>
-       </li>
-       <li>
-        <a class="hover:underline" href="#">
-         Careers
-        </a>
-       </li>
-       <li>
-        <a class="hover:underline" href="#">
-         Delivery Information
-        </a>
-       </li>
-       <li>
-        <a class="hover:underline" href="#">
-         Privacy Policy
-        </a>
-       </li>
-       <li>
-        <a class="hover:underline" href="#">
-         Terms &amp; Conditions
-        </a>
-       </li>
-      </ul>
-     </div>
-     <div>
-      <h3 class="text-lg font-semibold mb-4">
-       Subscribe
-      </h3>
-      <p class="text-sm mb-4">
-       Enter your email below to be the first to know about new collections and product
-      </p>
-     </div>
-    </div>
-   </div>
-  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+             const toggles = document.querySelectorAll('.toggle-category');
+             toggles.forEach(toggle => {
+                 toggle.addEventListener('click', function () {
+                     const category = this.nextElementSibling;
+                     category.classList.toggle('hidden');
+                     this.querySelector('i').classList.toggle('fa-plus');
+                     this.querySelector('i').classList.toggle('fa-minus');
+                 });
+             });
+         });
+   </script>
  </body>
 </html>
